@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* height: 100vh; */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 10vmin);
+    grid-template-rows: repeat(3, 10vmin);
+    grid-gap: 1vmin;
+  }
+  
+  section.container div {
+      border-radius: 50%;
+      border: 1px solid black;
+      cursor: pointer;
+      text-align: center;
+      font-size: 55px;
+      padding: 5px;
+      
+    }
+    .reset{
+        margin-top: 50px;
+    }
+    section.container div:hover {
+    background: rgb(255, 172, 255);
+    }
+  
+  
