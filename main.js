@@ -27,10 +27,16 @@ reset.addEventListener("click",init);
 function clickHandler(evt){
     if(evt.target.textContent==="" && winner!==turn){
         if(turn===player[0]){turn = player[1];
-        XO = "X";}
-        else{
+        XO = "X";
+        evt.target.style.backgroundColor = "black";
+        evt.target.style.color = "white";
+        message.innerHTML = `it is your turn player <span class="red">O</span>`;
+    }
+    else{
         turn = player[0];
         XO = "O"
+        evt.target.style.color = "black";
+        message.innerHTML = `it is your turn player <span class="red">X</span>`;
     }
     
         count +=1;
@@ -59,16 +65,28 @@ render();
 function init(){
     for(i=0 ; i< clickPattern.length ; i++){
         document.getElementById(i).textContent="";
+        document.getElementById(i).style.backgroundColor="white";
     }
+    message.textContent = "Make a Move YO";
     turn = player[0];
-    winner=NaN;
+    winner="";
+    count=0;
     clickPattern = new Array(9).fill(0);
     }
 
 
 function render(){ 
-    if(count===9){
-        message.textContent = "it is a tie loosers"
+    if(count===9 && winner!==turn){
+        message.innerHTML = `it is a tie YO <span class="red">:)</span>`
+    };
+    if(winner){
+        if(winner===player[1]){
+            message.innerHTML = `congrats player <span class="red"> ${XO}</span> you won \n`
+        }
+        else if(winner===player[0]){
+            message.innerHTML = `congrats player <span class="red"> ${XO}</span> you won \n`
+
+        }
     }
 }
 
