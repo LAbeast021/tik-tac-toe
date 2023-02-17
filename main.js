@@ -51,12 +51,10 @@ function clickHandler(evt){
 function winCheck (){
     for(i=0 ; i < winnPattern.length ; i++){
         if(clickPattern[winnPattern[i][0]] + clickPattern[winnPattern[i][1]] + clickPattern[winnPattern[i][2]] === -3 ) {
-            winner=turn;
-            console.log(XO)
+            winner = turn;
     }
         else if(clickPattern[winnPattern[i][0]] + clickPattern[winnPattern[i][1]] + clickPattern[winnPattern[i][2]] === 3 ) {
-             winner=turn
-            console.log(XO)
+             winner = turn
     }  
 }
 render();
