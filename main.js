@@ -26,7 +26,8 @@ reset.addEventListener("click",init);
 /*----- functions -----*////////////////////////////////////////////////////////////////////////////////////////////////////
 function clickHandler(evt){
     if(evt.target.textContent==="" && winner!==turn){
-        if(turn===player[0]){turn = player[1];
+        if(turn === player[0]){
+        turn = player[1];
         XO = "X";
         evt.target.style.backgroundColor = "black";
         evt.target.style.color = "white";
@@ -44,7 +45,6 @@ function clickHandler(evt){
         console.log(target.id);
         clickPattern.splice(target.id,1,turn);
         target.textContent= XO;
-        // console.log(target.textContent= XO);
         winCheck();
 }
 }
@@ -61,7 +61,6 @@ function winCheck (){
 }
 render();
 }
-// problem 
 function init(){
     for(i=0 ; i< clickPattern.length ; i++){
         document.getElementById(i).textContent="";
