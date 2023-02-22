@@ -22,9 +22,9 @@ let reset = document.querySelector("button");
 let message = document.getElementById("text");
 /*----- event listeners -----*//////////////////////////////////////////////////////////////////////////////////////////////
 btn.addEventListener("click", clickHandler);
-$("section div").hover(function(evt) {
-    console.log(evt.target)
-})
+// $("section div").hover(function(evt) {
+//     console.log(evt.target)
+// })
 reset.addEventListener("click",init);
 /*----- functions -----*////////////////////////////////////////////////////////////////////////////////////////////////////
 function clickHandler(evt){
@@ -75,6 +75,7 @@ function init(){
 
         // document.getElementById(i).style.backgroundColor="white";
         square[i].style.backgroundColor="";
+        square[i].style.color="";
 
     }
     message.textContent = "Make a Move YO";
