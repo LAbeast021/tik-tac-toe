@@ -45,6 +45,8 @@ function clickHandler(evt){
         count +=1;
         let target = evt.target;
         clickPattern.splice(target.id,1,turn);
+        // console.log(target , "------" , square.indexOf(target)) 
+        // clickPattern.splice(square.indexOf(target),1,turn);
         target.textContent= XO;
         winCheck();
 }
