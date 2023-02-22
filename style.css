@@ -71,6 +71,7 @@
     section.container div.clicked:hover{
       background: rgb(255, 255, 255);
       border-radius: 30%;
+      cursor: default;
     }
     .reset:hover{
       width: 120px;

@@ -80,10 +80,14 @@ function render(){
     if(winner){
         if(winner===player[1]){
             message.innerHTML = `congrats player <span class="red"> ${XO}</span> you won \n`
+            
         }
         else if(winner===player[0]){
             message.innerHTML = `congrats player <span class="red"> ${XO}</span> you won \n`
 
+        }
+        for(i=0 ; i < clickPattern.length ; i ++) {
+            square[i].classList.contains("clicked") ? console.log("clicked") : square[i].className += "clicked" ;
         }
     }
 }
