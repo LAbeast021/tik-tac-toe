@@ -62,8 +62,12 @@ render();
 }
 function init(){
     for(i=0 ; i< clickPattern.length ; i++){
-        document.getElementById(i).textContent="";
-        document.getElementById(i).style.backgroundColor="white";
+        // document.getElementById(i).textContent="";
+        square[i].textContent="";
+        // document.getElementById(i).style.backgroundColor="white";
+        square[i].style.backgroundColor="white";
+        square[i].classList.remove("clicked");
+
     }
     message.textContent = "Make a Move YO";
     turn = player[0];
