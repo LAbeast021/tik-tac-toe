@@ -42,7 +42,6 @@ function clickHandler(evt){
     
         count +=1;
         let target = evt.target;
-        console.log(target.id);
         clickPattern.splice(target.id,1,turn);
         target.textContent= XO;
         winCheck();
