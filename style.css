@@ -68,6 +68,10 @@
     border-radius: 15%;
     
     }
+    section.container div.clicked:hover{
+      background: rgb(255, 255, 255);
+      border-radius: 30%;
+    }
     .reset:hover{
       width: 120px;
       border-radius: 20px;

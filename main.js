@@ -32,12 +32,14 @@ function clickHandler(evt){
         evt.target.style.backgroundColor = "black";
         evt.target.style.color = "white";
         message.innerHTML = `it is your turn player <span class="red">O</span>`;
+        evt.target.className += "clicked" ;
     }
     else{
         turn = player[0];
         XO = "O"
         evt.target.style.color = "black";
         message.innerHTML = `it is your turn player <span class="red">X</span>`;
+        evt.target.className += "clicked" ;
     }
     
         count +=1;
